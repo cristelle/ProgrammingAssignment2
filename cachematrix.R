@@ -1,4 +1,4 @@
-## calcultes the inverse of a matrix using caching properties
+## computes the inverse of a matrix using caching properties
 ## if the inverse has never been computed, it solves it
 ## and puts it in a cache via setinverse() 
 ## if it has already been computed, it gets it from the cache
@@ -16,7 +16,7 @@ makeCacheMatrix <- function (x = matrix(c(1,2,3,4), nrow=2, ncol=2)) {
   getinverse <- function() xinv # returns the current inverse, these 2 are similar to the set and get 
   list(set = set, get = get,
        setinverse = setinverse,
-       getinverse = getinverse) # makes the list of available functions 
+       getinverse = getinverse) # makes the list of available functions that will be linked to the x object
   
 }
 
@@ -37,3 +37,4 @@ cacheSolve <- function (amatrix) { # Computes, caches, and returns matrix invers
 # <-, always creates a variable in the current environment. 
 # The deep assignment arrow, <<-, never creates a variable in the current environment, 
 # but instead modifies an existing variable found by walking up the parent environments.
+
